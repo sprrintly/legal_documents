@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; FAQ – Sprrintly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Contact card ─────────────────────────────────── */
+    .contact-card {
+      background: var(--md-primary-container);
+      border: 1px solid var(--md-primary);
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .contact-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--md-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--md-on-primary);
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-card-body h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--md-on-primary-container);
+      margin-bottom: 6px;
+    }
+
+    .contact-card-body p {
+      font-size: 14px;
+      color: var(--md-on-primary-container);
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+
+    .contact-email-link {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--md-primary);
+      background: #fff;
+      border-radius: 8px;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: box-shadow 0.15s;
+    }
+
+    .contact-email-link:hover {
+      box-shadow: 0 2px 8px rgba(61, 107, 61, 0.18);
+      color: var(--md-on-primary-container);
+    }
+
+    .response-note {
+      font-size: 13px;
+      color: var(--md-on-surface-variant);
+      margin-top: 12px;
+    }
+
+    /* ── Section divider ──────────────────────────────── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--md-outline-variant);
+      margin: 48px 0 40px;
+    }
+
+    /* ── FAQ accordion ────────────────────────────────── */
+    .faq-group {
+      margin-bottom: 32px;
+    }
+
+    .faq-group-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--md-on-surface-variant);
+      margin-bottom: 12px;
+    }
+
+    details.faq-item {
+      border: 1px solid var(--md-outline-variant);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      background: #fff;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+
+    details.faq-item[open] {
+      border-color: var(--md-primary);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--md-on-surface);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--md-on-surface-variant);
+      transition: transform 0.2s;
+    }
+
+    details.faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--md-primary);
+    }
+
+    details.faq-item[open] summary {
+      color: var(--md-primary);
+    }
+
+    .faq-body {
+      padding: 0 20px 18px;
+      border-top: 1px solid var(--md-outline-variant);
+    }
+
+    .faq-body p {
+      font-size: 14px;
+      color: var(--md-on-surface-variant);
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    .faq-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-body a {
+      color: var(--md-primary);
+      font-weight: 500;
+    }
+
+    .faq-body ol,
+    .faq-body ul {
+      margin: 8px 0 8px 20px;
+      font-size: 14px;
+      color: var(--md-on-surface-variant);
+    }
+
+    .faq-body li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html">Sprrintly</a>
+      <nav>
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="terms_and_conditions.html">Terms &amp; Conditions</a>
+        <a href="contact.html" class="active">Contact &amp; FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Contact &amp; FAQ</h1>
+      <p class="updated-date">Support information for Sprrintly users</p>
+
+      <!-- ── Contact ───────────────────────────────────── -->
+      <h1>Get in Touch</h1>
+      <p>Have a question, concern, or need help with your account? Our support team is here to help.</p>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 7l10 7 10-7"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <h2>Email Support</h2>
+          <p>Send us an email and we'll get back to you as soon as possible.</p>
+          <a class="contact-email-link" href="mailto:support@sprrintly.com">support@sprrintly.com</a>
+        </div>
+      </div>
+
+      <p class="response-note">We aim to respond to all enquiries within 24–48 hours on business days.
+        For account deletion requests, please refer to our
+        <a href="delete_account.html">Account Deletion page</a>.</p>
+
+      <hr class="section-divider" />
+
+      <!-- ── FAQ ──────────────────────────────────────── -->
+      <h1>Frequently Asked Questions</h1>
+
+      <!-- Account -->
+      <div class="faq-group">
+        <p class="faq-group-label">Account</p>
+
+        <details class="faq-item">
+          <summary>
+            How do I create a Sprrintly account?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Download the Sprrintly app and sign up using your email address, or continue with Google or Apple Sign-In. Once registered, you can start using the app immediately.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How do I update my account information?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>You can update your personal information at any time from your Profile screen within the app. Alternatively, contact us at <a href="mailto:support@sprrintly.com">support@sprrintly.com</a> and we'll assist you.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How do I delete my account?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>You can delete your account directly within the app by following these steps:</p>
+            <ol>
+              <li>Open Sprrintly and log in</li>
+              <li>On the bottom bar, navigate to the <strong>Organise</strong> screen</li>
+              <li>Go to your <strong>Profile</strong> screen</li>
+              <li>Tap the <strong>three-dot menu (⋮)</strong> then <strong>More</strong></li>
+              <li>Select <strong>Delete Account</strong> and confirm</li>
+            </ol>
+            <p>For full details on what data is deleted and retained, see our <a href="delete_account.html">Account Deletion page</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            I can't access my account — what should I do?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Try resetting your password from the login screen. If you signed up using Google or Apple Sign-In, make sure you're using the same provider you registered with.</p>
+            <p>If you're still unable to access your account, contact us at <a href="mailto:support@sprrintly.com">support@sprrintly.com</a> with the email address associated with your account.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Privacy & Data -->
+      <div class="faq-group">
+        <p class="faq-group-label">Privacy &amp; Data</p>
+
+        <details class="faq-item">
+          <summary>
+            What personal data does Sprrintly collect?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>We collect the information you provide when registering and using the app, including your name, email address, and user-generated content such as tasks, notes, and weekly plans. We also collect usage data to improve the app.</p>
+            <p>For a full breakdown, see our <a href="privacy_policy.html">Privacy Policy</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Is my data shared with third parties?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>We may share data with trusted service providers who help us operate the app (such as hosting and analytics). We do not sell your personal information. Any sharing is governed by our <a href="privacy_policy.html">Privacy Policy</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How long is my data retained after I delete my account?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Most data is deleted immediately upon processing your deletion request. Some data may be retained for up to <strong>30 days</strong> for security and fraud prevention purposes, or longer if required by law in your region (e.g. Australian Privacy Act, GDPR, CCPA).</p>
+            <p>See our <a href="delete_account.html">Account Deletion page</a> for a full breakdown.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Is Sprrintly GDPR compliant?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Yes. We apply GDPR data protection principles as our baseline standard for all users worldwide, regardless of their location. EU residents have the right to access, update, export, and delete their personal data at any time.</p>
+            <p>To exercise your rights, contact us at <a href="mailto:support@sprrintly.com">support@sprrintly.com</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How do I request a copy of my data?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Email us at <a href="mailto:support@sprrintly.com">support@sprrintly.com</a> with the subject line <em>"Data Access Request"</em> and include the email address associated with your account. We will respond within one month in accordance with applicable data protection laws.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Billing -->
+      <div class="faq-group">
+        <p class="faq-group-label">Billing &amp; Subscriptions</p>
+
+        <details class="faq-item">
+          <summary>
+            How do I cancel my subscription?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>You can cancel your subscription at any time through your account management page within the app, or by contacting our support team. Cancellations take effect at the end of the current billing cycle.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Are subscription fees refundable?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Except where required by law, paid subscription fees are non-refundable. Refund requests may be considered on a case-by-case basis at Sprrintly's sole discretion. Contact <a href="mailto:support@sprrintly.com">support@sprrintly.com</a> to discuss your situation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Will I be charged after a free trial?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>If you provided billing information during a free trial, you will be automatically charged the applicable subscription fee on the last day of the trial period unless you cancel beforehand.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- General -->
+      <div class="faq-group">
+        <p class="faq-group-label">General</p>
+
+        <details class="faq-item">
+          <summary>
+            How do I unsubscribe from Sprrintly emails?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Every email we send includes an unsubscribe link at the bottom. Click it to opt out of that email list. You can also contact us at <a href="mailto:support@sprrintly.com">support@sprrintly.com</a> to manage your email preferences.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Where is Sprrintly based?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Sprrintly is developed and operated by <strong>Sprrintly Technologies PTY LTD</strong>, based in Footscray, Melbourne, Australia. Our services are governed by Australian law.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Which authentication providers does Sprrintly support?
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            <p>Sprrintly supports sign-in via <strong>Google Sign-In</strong> and <strong>Apple Sign-In</strong>, both managed through Firebase Authentication, as well as email and password sign-in. Each provider is subject to their own privacy policies.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2026 Sprrintly Technologies PTY LTD &nbsp;&middot;&nbsp;
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="terms_and_conditions.html">Terms &amp; Conditions</a>
+        <a href="delete_account.html">Delete Account</a>
+        <a href="contact.html">Contact &amp; FAQ</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
